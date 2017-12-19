@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         //PARA QUE EL MAINACTIVITY ESCUCHE DEL LOGINFRAGMENT,REGISTER Y FIREBASEADMIN
         loginFragment.setListener(mainActivityEvents);
         registerFragment.setListener(mainActivityEvents);
-        DataHolder.instance.fireBaseAdmin.setListener(mainActivityEvents);
+        DataHolder.instance.fireBaseAdmin.setFirebaseAdminListener(mainActivityEvents);
 
         //CREAMOS LAS TRANSICIONES
 
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         transaction.commit();
 
         //  SALTARSE LOGIN
-        //DataHolder.instance.fireBaseAdmin.loginEmailPass("guille@guille.com","1234567890",this);
+        //DataHolder.instance.fireBaseAdmin.loginEmailPass("sergioas1996@gmail.com","123456",this);
     }
 }
 

@@ -27,7 +27,7 @@ public class FireBaseAdmin {
     FirebaseDatabase database;
     DatabaseReference myRefRaiz;
 
-    public FirebaseAdminListener listener;
+    public FirebaseAdminListener firebaseAdminListener;
     public FirebaseUser user;
 
     public FireBaseAdmin(){
@@ -36,8 +36,8 @@ public class FireBaseAdmin {
         myRefRaiz=database.getReference();
     }
 
-    public void setListener(FirebaseAdminListener listener){
-        this.listener=listener;
+    public void setFirebaseAdminListener(FirebaseAdminListener firebaseAdminListener){
+        this.firebaseAdminListener=firebaseAdminListener;
     }
 
     public void regUser(String email, String password, Activity activity){
@@ -47,9 +47,9 @@ public class FireBaseAdmin {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             user=FirebaseAuth.getInstance().getCurrentUser();
-                            listener.firebaseAdmin_registerOk(true);
+                            firebaseAdminListener.firebaseAdmin_registerOk(true);
                         }else{
-                            listener.firebaseAdmin_registerOk(false );
+                            firebaseAdminListener.firebaseAdmin_registerOk(false );
                         }
                     }
                 });
@@ -62,9 +62,9 @@ public class FireBaseAdmin {
 
                 if (task.isSuccessful()) {
                     user = FirebaseAuth.getInstance().getCurrentUser();
-                    listener.firebaseAdmin_loginOk(true);
+                    firebaseAdminListener.firebaseAdmin_loginOk(true);
                 } else {
-                    listener.firebaseAdmin_loginOk(false);
+                    firebaseAdminListener.firebaseAdmin_loginOk(false);
                 }
             }
         });
@@ -82,14 +82,14 @@ public class FireBaseAdmin {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
-                listener.firebaseAdmin_ramaDescargada(rama,dataSnapshot );
+                firebaseAdminListener.firebaseAdmin_ramaDescargada(rama,dataSnapshot );
 
             }
 
             @Override
             public void onCancelled(DatabaseError error) {
                 // Failed to read value
-                listener.firebaseAdmin_ramaDescargada(rama,  null);
+                firebaseAdminListener.firebaseAdmin_ramaDescargada(rama,  null);
                 Log.w(TAG, "Failed to read value.", error.toException());
             }
         });
