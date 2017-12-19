@@ -9,6 +9,6 @@ package com.example.milib;
 // SIEMPRE Y CUANDO SE IMPLEMENTE LOGINFRAGMENT LISTENER
 
 public interface LoginFragmentListener {
-    public void loginFragmentLoginButtonClicked(String sUser, String sPass);
-    public void loginFragmentRegisterButtonClicked();
+    public void OnLFLoginBtnClicked(String sUser, String sPass);
+    public void OnLFRegBtnClicked();
 }

@@ -92,8 +92,8 @@ class SecondActivityEvents implements FireBaseAdminListener{
             Log.v("coches","COCHES CONTIENE: "+coches);
 
             //PARA TRANSFORMAR UN COLLECTION A UN ARRAY LIST HAY QUE HACER es new ArrayList<Mensaje>(msg.values())
-            ListaCochesAdapter listaCochesAdapter=new ListaCochesAdapter(coches,secondActivity);
-            secondActivity.listaFragmentCoches.recyclerView.setAdapter(listaCochesAdapter);
+            //ListaCochesAdapter listaCochesAdapter=new ListaCochesAdapter(coches,secondActivity);
+            //secondActivity.listaFragmentCoches.recyclerView.setAdapter(listaCochesAdapter);
         }
 
 

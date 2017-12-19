@@ -6,6 +6,6 @@ package com.example.milib;
 
 public interface RegisterFragmentListener {
 
-    public void registerFragmentRegisterButtonAceptarClicked(String sUser, String sPass);
-    public void registerFragmentRegisterButtonCancelarClicked();
+    public void OnRFAccBtnClicked(String sUser, String sPass);
+    public void OnRFCancelBtnClicked();
 }

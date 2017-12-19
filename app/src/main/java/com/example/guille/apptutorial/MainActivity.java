@@ -68,13 +68,13 @@ public class MainActivity extends AppCompatActivity {
     //CUANDO ENTRE POR AQUI ES QUE LE DIERON AL BOTON LOGIN QUE LO LLEGA A SABER POR LA IMPLEMENTACION DEL LOGINFRAGMENTLISTENER
 
      @Override
-     public void loginFragmentLoginButtonClicked(String sUser, String sPass) {
+     public void OnLFLoginBtnClicked(String sUser, String sPass) {
          DataHolder.instance.fireBaseAdmin.loginEmailPass(sUser,sPass,mainActivity  );
      }
     //CUANDO ENTRE POR AQUI ES QUE LE DIERON AL BOTON REGISTRAR QUE LO LLEGA A SABER POR LA IMPLEMENTACION DEL LOGINFRAGMENTLISTENER
 
      @Override
-     public void loginFragmentRegisterButtonClicked() {
+     public void OnLFRegBtnClicked() {
         //CREAMOS LAS TRANSICIONES
          Log.v("registro","REEEEEEEEGIIIIIIIIISSSSSSTROOOOOOOOO");
 
@@ -87,13 +87,13 @@ public class MainActivity extends AppCompatActivity {
      }
 
      @Override
-     public void registerFragmentRegisterButtonAceptarClicked(String sUser, String sPass) {
+     public void OnRFAccBtnClicked(String sUser, String sPass) {
          Log.v("tranAceptar","TODO CORRECTO");
          DataHolder.instance.fireBaseAdmin.registerEmailPass(sUser,sPass,mainActivity);
      }
 
      @Override
-     public void registerFragmentRegisterButtonCancelarClicked() {
+     public void OnRFCancelBtnClicked() {
 
          FragmentTransaction transaction = mainActivity.getSupportFragmentManager().beginTransaction();
 

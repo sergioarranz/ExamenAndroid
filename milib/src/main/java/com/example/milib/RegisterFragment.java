@@ -64,12 +64,12 @@ class RegisterFragmentsEvents implements  View.OnClickListener{
     public void onClick(View v) {
         if(v.getId()==this.registerFragment.btnaceptar.getId()){
             Log.v("btnAceptar","BOTON REGISTRO ACEPTADOOOOO"+registerFragment.etuserreg);
-            this.registerFragment.listener.registerFragmentRegisterButtonAceptarClicked(registerFragment.etuserreg.getText().toString(),registerFragment.etpassreg.getText().toString());
+            this.registerFragment.listener.OnRFAccBtnClicked(registerFragment.etuserreg.getText().toString(),registerFragment.etpassreg.getText().toString());
 
         }
              else if(v.getId()==this.registerFragment.btncancelar.getId()){
             Log.v("cancelar","BOnooooooO");
-                this.registerFragment.listener.registerFragmentRegisterButtonCancelarClicked();
+                this.registerFragment.listener.OnRFCancelBtnClicked();
 
         }else{
             Log.v("rechazo","BOnooooooO");

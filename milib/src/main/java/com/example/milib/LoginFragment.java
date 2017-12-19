@@ -80,9 +80,9 @@ class LoginFragmentsEvents implements View.OnClickListener {
         if (v.getId() == this.loginFragment.btnLogin.getId()) {
             Log.v("botonlogin","BOTON LOGIIN DADO");
             Log.v("botonlogin","BOTON LOGIIN DADO"+loginFragment.etUsername+loginFragment.etPass);
-            this.loginFragment.listener.loginFragmentLoginButtonClicked(this.loginFragment.etUsername.getText().toString(), this.loginFragment.etPass.getText().toString());
+            this.loginFragment.listener.OnLFLoginBtnClicked(this.loginFragment.etUsername.getText().toString(), this.loginFragment.etPass.getText().toString());
         }else if (v.getId() == this.loginFragment.btnRegistro.getId()) {
-            this.loginFragment.listener.loginFragmentRegisterButtonClicked();
+            this.loginFragment.listener.OnLFRegBtnClicked();
             Log.v("registro","REEEEEEEEGIIIIIIIIISSSSSSTROOOOOOOOO");
         }
     }
