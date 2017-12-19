@@ -44,10 +44,13 @@ public class RegisterFragment extends Fragment {
         etpassreg=v.findViewById(R.id.etpassreg);
         btnaceptar=v.findViewById(R.id.btnaceptar);
         btncancelar=v.findViewById(R.id.btncancelar);
-
+        btnaceptar.setText(R.string.btnaccept);
+        btncancelar.setText(R.string.btncancel);
         events = new RegisterFragmentsEvents(this);
         btncancelar.setOnClickListener(events);
         btnaceptar.setOnClickListener(events);
+
+
 
         return v;
     }

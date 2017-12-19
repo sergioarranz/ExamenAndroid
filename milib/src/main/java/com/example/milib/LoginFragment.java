@@ -47,6 +47,9 @@ public class LoginFragment extends Fragment {
         btnLogin=v.findViewById(R.id.btnlogin);
         btnRegistro=v.findViewById(R.id.btnregistro);
 
+        btnLogin.setText(R.string.btnlogin);
+        btnRegistro.setText(R.string.btnregister);
+
         events = new LoginFragmentsEvents(this);
         //PASARLE EVENTS PARA QUE EL BOTON ESTE ESCUCHANDO SUS EVENTOS
         btnLogin.setOnClickListener(events);

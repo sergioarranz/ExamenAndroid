@@ -59,7 +59,7 @@ class MainActivityEvents implements LoginFragmentListener, RegisterFragmentListe
     // Register --> Login --> SecondActivity (User registers)
     @Override
     public void OnRFAccBtnClicked(String sUser, String sPass) {
-        DataHolder.instance.fireBaseAdmin.registerEmailPass(sUser,sPass,mainActivity);
+        DataHolder.instance.fireBaseAdmin.regUser(sUser,sPass,mainActivity);
     }
     // Register --> Back to Main Activity (User cancels register)
     @Override
@@ -73,7 +73,7 @@ class MainActivityEvents implements LoginFragmentListener, RegisterFragmentListe
     // Login --> Second Activity (User Login successful)
     @Override
     public void OnLFLoginBtnClicked(String sUser, String sPass) {
-        DataHolder.instance.fireBaseAdmin.loginEmailPass(sUser,sPass,mainActivity);
+        DataHolder.instance.fireBaseAdmin.logUser(sUser,sPass,mainActivity);
     }
     // Login --> RegisterFragment (sends user to Register View)
     @Override

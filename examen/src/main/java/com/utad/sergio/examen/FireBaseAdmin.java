@@ -21,8 +21,6 @@ import static android.content.ContentValues.TAG;
  * Created by sergio on 19/12/17.
  */
 
-//HAY QUE AGREGAR COSAS EN GRADLE SCRIPTS BUILD.GRADLE APPTUTORIAL Y MODULE APP
-
 public class FireBaseAdmin {
 
     private FirebaseAuth mAuth;
@@ -42,8 +40,7 @@ public class FireBaseAdmin {
         this.listener=listener;
     }
 
-    public void registerEmailPass(String email, String password, Activity activity){
-
+    public void regUser(String email, String password, Activity activity){
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(activity, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -58,25 +55,17 @@ public class FireBaseAdmin {
                 });
 
     }
-    public void loginEmailPass(String email, String password, Activity activity) {
+    public void logUser(String email, String password, Activity activity) {
         mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(activity, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
 
                 if (task.isSuccessful()) {
-                    Log.d("firebaselogin", "HOLA");
                     user = FirebaseAuth.getInstance().getCurrentUser();
                     listener.firebaseAdmin_loginOk(true);
-
                 } else {
-                    // If sign in fails, display a message to the user.
                     listener.firebaseAdmin_loginOk(false);
-                    Log.w(TAG, "signInWithEmail:failure", task.getException());
-
-
                 }
-
-                // ...
             }
         });
 

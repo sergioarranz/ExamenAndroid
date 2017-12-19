@@ -58,7 +58,7 @@
             android:layout_marginBottom="8dp"
             android:layout_marginStart="44dp"
             android:layout_marginTop="8dp"
-            android:text="LOGIN"
+            android:text="predefined"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -70,7 +70,7 @@
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="28dp"
             android:layout_marginTop="8dp"
-            android:text="REGISTRARSE"
+            android:text="predefined"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">examen</string>
+    <string name="welcomemsg">Bienvenid@ al examen</string>
+    <string name="btnsignout">cerrar sesión</string>
 </resources>
